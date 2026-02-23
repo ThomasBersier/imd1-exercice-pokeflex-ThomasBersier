@@ -222,6 +222,7 @@
     // Clone le template
     const cardClone = cardTemplate.content.cloneNode(true);
     const card = cardClone.querySelector(".card");
+    card.classList.add("card-animate-in");
 
     // === Remplissage des données ===
 
@@ -262,6 +263,7 @@
     }
 
     // Types
+    console.log(pokemon);
     const typesContainer = card.querySelector('[data-field="types-container"]');
     if (typesContainer) {
       // Récupère les types depuis apiTypes ou types
@@ -273,7 +275,8 @@
       // Crée un badge pour chaque type
       types.forEach(function (typeName) {
         const badge = document.createElement("span");
-        badge.className = "type-badge";
+        badge.classList.add("type-badge");
+        badge.classList.add("type-" + typeName.toLowerCase());
         badge.textContent = typeName;
         typesContainer.appendChild(badge);
       });
@@ -301,6 +304,12 @@
     if (speedEl) speedEl.textContent = stats.speed;
 
     // Ajoute la carte au conteneur
+    const closeBtn = card.querySelector(".close-btn");
+    closeBtn.addEventListener("click", () => {
+      card.classList.add("removing");
+      setTimeout(() => card.remove(), 300);
+    });
+
     cardsContainer.appendChild(card);
   }
 

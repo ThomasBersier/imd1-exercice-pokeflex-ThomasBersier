@@ -22,16 +22,23 @@
 
     <!-- ===== EN-TÊTE ===== -->
     <header class="header header-flex">
-      <h1 class="header-title">PokéFlex</h1>
+      <h1
+        href=""
+        onclick="
+          event.preventDefault();
+          location.reload();
+        "
+        class="header-title"
+      >
+        POKEFLEX
+      </h1>
     </header>
 
     <!-- ===== SECTION RECHERCHE ===== -->
     <main class="main main-flex">
       <section class="search-section search-flex">
         <form class="search-form search-form-flex" id="search-form">
-          <label for="pokemon-input" class="search-label">
-            Rechercher un Pokémon
-          </label>
+          <label for="pokemon-input" class="search-label"> </label>
           <div class="search-input-group search-input-flex">
             <input
               type="text"
@@ -43,7 +50,7 @@
             />
             <button type="submit" class="search-button">Chercher</button>
           </div>
-          <p class="search-helper">Ex: Gruikui, Pikachu, Salamèche</p>
+          <p class="search-helper"></p>
         </form>
 
         <!-- Message d'erreur (caché par défaut avec l'attribut hidden) -->
@@ -127,6 +134,7 @@
             <span class="stat-value" data-stat="speed">0</span>
           </div>
         </div>
+        <button class="close-btn" onclick="" title="Supprimer">✕</button>
       </article>
     </template>
 

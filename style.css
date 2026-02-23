@@ -1,3 +1,261 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: center;
+  background-image: url(img/2.jpg);
+  background-size: cover;
+  color: white;
+  font-family: Myfont;
+  background-color: #277b62;
+}
+@font-face {
+  font-family: "MyFont";
+  src: url(font/UpheavalTT-BRK-.woff) format("woff");
+  src: url(font/UpheavalTT-BRK-.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+.header-flex {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-family: "MyFont";
+}
+
+.search-form-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+img {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  justify-content: flex-start;
+}
+span.stat-label {
+  color: rgb(195, 195, 195);
+}
+
+.card-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgb(255, 0, 0);
+  width: 700px;
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/vert.jpg);
+  background-size: cover;
+  border: solid;
+  border-color: #ffffff;
+}
+.card-stats-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+}
+.card-info {
+}
+h2 {
+  font-family: Myfont;
+  margin: 0;
+  padding-top: 20px;
+}
+h1 {
+  font-size: 100px;
+  margin: 0;
+  padding-top: 40px;
+}
+.search-input {
+  border: none;
+  padding: 5px;
+  border-radius: 15px;
+  padding-left: 15px;
+  font-family: Myfont;
+}
+.search-label {
+  font-size: larger;
+  padding-bottom: 10px;
+}
+.card-info {
+  padding: 0 50px;
+}
+
+.search-button {
+  border: none;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  background-color: white;
+  font-family: Myfont;
+}
+.search-button:hover {
+  background-color: rgb(0, 142, 83);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.type-badge {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  align-items: center;
+}
+.card-types-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+  width: 80px;
+}
+.type-feu {
+  background-color: #ff4500;
+}
+.type-eau {
+  background-color: #1e90ff;
+}
+.type-poison {
+  background-color: #9b30ff;
+}
+.type-plante {
+  background-color: #32cd32;
+}
+.type-insecte {
+  background-color: #146214;
+}
+.type-ténèbres {
+  background-color: #383d38;
+}
+.type-dragon {
+  background-color: #36c1d1;
+}
+.type-vol {
+  background-color: #98dce3;
+}
+.type-électrik {
+  background-color: #dede44;
+}
+.type-fée {
+  background-color: #e91382;
+}
+.type-normal {
+  background-color: #686868;
+}
+.type-combat {
+  background-color: #9e0808;
+}
+.type-spectre {
+  background-color: #5b1a7d;
+}
+.type-sol {
+  background-color: #a1651b;
+}
+.type-roche {
+  background-color: #a89256;
+}
+.type-acier {
+  background-color: #397475;
+}
+.type-glace {
+  background-color: #23e0ba;
+}
+.type-psy {
+  background-color: #e98fcf;
+}
+.type-poison {
+  background-color: #9d0798;
+}
+.stat-label {
+  color: grey;
+}
+.card-animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeIn 350ms ease-out forwards;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* État normal */
+.card:hover {
+  transition:
+    transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-origin: center;
+  z-index: 1;
+}
+
+/* Hover */
+.card-flex:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+h1:hover {
+  color: rgb(0, 142, 83);
+}
+#cards-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  background: rgba(55, 55, 55, 0.85);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.15s,
+    transform 0.5s;
+  margin: 5px;
+}
+
+.close-btn:hover {
+  background-color: red;
+  transform: scale(1.15);
+}
+.card.removing {
+  opacity: 0;
+  transform: scale(0.05);
+  transition:
+    opacity 0.3s,
+    transform 0.5s;
+}
 /*
  * =====================================================
  * 🦊 PokéCSS - Feuille de styles
