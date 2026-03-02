@@ -2,11 +2,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   align-items: center;
   justify-content: center;
-  background-image: url(img/2.jpg);
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/img/bleuuu.jpeg);
+  background-attachment: fixed;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   font-family: Myfont;
   background-color: #277b62;
+  min-height: 100vh;
 }
 @font-face {
   font-family: "MyFont";
@@ -37,7 +41,7 @@ img {
   justify-content: flex-start;
 }
 span.stat-label {
-  color: rgb(195, 195, 195);
+  color: rgb(255, 255, 255);
 }
 
 .card-flex {
@@ -50,7 +54,7 @@ span.stat-label {
   border-radius: 15px;
   background-color: rgb(255, 0, 0);
   width: 700px;
-  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/vert.jpg);
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/normal.jpeg);
   background-size: cover;
   border: solid;
   border-color: #ffffff;
@@ -98,7 +102,7 @@ h1 {
   font-family: Myfont;
 }
 .search-button:hover {
-  background-color: rgb(0, 142, 83);
+  background-color: rgb(117, 117, 117);
   color: white;
   transition: 0.3s ease;
 }
@@ -113,6 +117,8 @@ h1 {
   border-radius: 15px;
   color: rgb(255, 255, 255);
   align-items: center;
+  border: solid 1px;
+  border-color: #ffffff;
 }
 .card-types-flex {
   display: flex;
@@ -148,7 +154,7 @@ h1 {
   background-color: #98dce3;
 }
 .type-électrik {
-  background-color: #dede44;
+  background-color: #f4c435;
 }
 .type-fée {
   background-color: #e91382;
@@ -213,7 +219,8 @@ h1 {
   z-index: 10;
 }
 h1:hover {
-  color: rgb(0, 142, 83);
+  color: rgb(117, 117, 117);
+  transition: 0.3s ease;
 }
 #cards-container {
   justify-content: center;
@@ -240,7 +247,7 @@ h1:hover {
   align-items: center;
   justify-content: center;
   transition:
-    background 0.15s,
+    background-color 0.15s,
     transform 0.5s;
   margin: 5px;
 }
@@ -256,6 +263,58 @@ h1:hover {
     opacity 0.3s,
     transform 0.5s;
 }
+.card-flex:has(.type-fée) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/fée.jpeg);
+}
+.card-flex:has(.type-glace) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/glace.jpeg);
+}
+.card-flex:has(.type-sol) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/sol.jpeg);
+}
+.card-flex:has(.type-roche) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/roche.jpg);
+}
+.card-flex:has(.type-vol) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/vol.jpeg);
+}
+.card-flex:has(.type-dragon) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/dragon.jpeg);
+}
+.card-flex:has(.type-psy) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/psy.jpeg);
+}
+.card-flex:has(.type-ténèbres) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/dark.jpg);
+}
+.card-flex:has(.type-combat) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/combat.jpg);
+}
+.card-flex:has(.type-poison) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/poison.jpeg);
+}
+.card-flex:has(.type-insecte) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/insecte.jpeg);
+}
+.card-flex:has(.type-électrik) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/electrik.jpeg);
+}
+.card-flex:has(.type-acier) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/acier.jpg);
+}
+.card-flex:has(.type-eau) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/eau.jpg);
+}
+.card-flex:has(.type-plante) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/vert.jpg);
+}
+.card-flex:has(.type-spectre) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/spectre.jpg);
+}
+.card-flex:has(.type-feu) {
+  background-image: url(/imd1-exercice-pokeflex-ThomasBersier/card/feu.jpg);
+}
+/*
 /*
  * =====================================================
  * 🦊 PokéCSS - Feuille de styles
